@@ -8,6 +8,8 @@ let comments = document.getElementById("list");
 let submit = document.getElementById("submit");
 let interval;
 
+countUp()
+
 function count() {
     counter.innerText = parseInt(counter.innerText) + 1;
 };
