@@ -5,7 +5,6 @@ let heart = document.getElementById("heart");
 let pause = document.getElementById("pause");
 let counter = document.getElementById("counter");
 let comments = document.getElementById("list");
-let submit = document.getElementById("submit");
 let interval;
 
 function count() {
@@ -15,28 +14,31 @@ function count() {
 function countUp() {
   interval = setInterval(count, 1000)
 }
+
+countUp() // Prime the count
+
 // As a user, I can manually increment and decrement the counter using the plus and minus buttons. CHECK
-document.getElementById("minus").addEventListener("click", decrement);
+minus.addEventListener("click", decrement);
 
 function decrement(){
-  let count = parseInt(document.getElementById('counter').innerHTML)
-  document.getElementById('counter').innerHTML = count - 1
+  let count = parseInt(counter.innerHTML)
+  counter.innerHTML = count - 1
 }
 
-document.getElementById("plus").addEventListener("click", increment);
+plus.addEventListener("click", increment);
 
 function increment(){
-  let count = parseInt(document.getElementById('counter').innerHTML)
-  document.getElementById('counter').innerHTML = count + 1
+  let count = parseInt(counter.innerHTML)
+  counter.innerHTML = count + 1
 }
 
 // As a user, I can 'like' an individual number of the counter. I should see count of the number of 'likes' associated with that number.
-document.getElementById("heart").addEventListener("click", like);
+heart.addEventListener("click", like);
 
 let tally = 0
 
 function like(){
-  let currentCount = parseInt(document.getElementById('counter').innerHTML)
+  let currentCount = parseInt(counter.innerHTML)
   let ul = document.getElementsByTagName('ul')[0]
   tally = tally + 1
   let element = document.createElement('li')
@@ -61,4 +63,14 @@ pause.addEventListener("click", () => {
         submit.disabled = false;
         pause.innerText = "pause";
     }
+});
+
+// As a user, I can leave comments on my gameplay, such as: "Wow, what a fun game this is."
+document.addEventListener("submit", function(e) {
+    e.preventDefault()
+    let newComment = document.getElementById("comment-input");
+    let li = document.createElement("li");
+    li.innerText = newComment.value;
+    comments.appendChild(li);
+    e.target.reset();
 });
