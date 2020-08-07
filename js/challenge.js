@@ -64,3 +64,5 @@ pause.addEventListener("click", () => {
         pause.innerText = "pause";
     }
 });
+
+// As a user, I can leave comments on my gameplay, such as: "Wow, what a fun game this is."
