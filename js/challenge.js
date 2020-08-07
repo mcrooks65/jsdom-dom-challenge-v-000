@@ -25,11 +25,11 @@ function decrement(){
   counter.innerHTML = count - 1
 }
 
-document.getElementById("plus").addEventListener("click", increment);
+plus.addEventListener("click", increment);
 
 function increment(){
-  let count = parseInt(document.getElementById('counter').innerHTML)
-  document.getElementById('counter').innerHTML = count + 1
+  let count = parseInt(counter.innerHTML)
+  counter.innerHTML = count + 1
 }
 
 // As a user, I can 'like' an individual number of the counter. I should see count of the number of 'likes' associated with that number.
