@@ -18,11 +18,11 @@ function countUp() {
   interval = setInterval(count, 1000)
 }
 // As a user, I can manually increment and decrement the counter using the plus and minus buttons. CHECK
-document.getElementById("minus").addEventListener("click", decrement);
+minus.addEventListener("click", decrement);
 
 function decrement(){
-  let count = parseInt(document.getElementById('counter').innerHTML)
-  document.getElementById('counter').innerHTML = count - 1
+  let count = parseInt(counter.innerHTML)
+  counter.innerHTML = count - 1
 }
 
 document.getElementById("plus").addEventListener("click", increment);
