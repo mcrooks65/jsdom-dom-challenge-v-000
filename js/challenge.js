@@ -67,3 +67,11 @@ pause.addEventListener("click", () => {
 });
 
 // As a user, I can leave comments on my gameplay, such as: "Wow, what a fun game this is."
+document.addEventListener("submit", function(e) {
+    e.preventDefault()
+    let newComment = document.getElementById("comment-input");
+    let li = document.createElement("li");
+    li.innerText = newComment.value;
+    comments.appendChild(li);
+    e.target.reset();
+});
