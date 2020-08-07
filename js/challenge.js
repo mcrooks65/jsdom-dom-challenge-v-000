@@ -8,8 +8,6 @@ let comments = document.getElementById("list");
 let submit = document.getElementById("submit");
 let interval;
 
-countUp()
-
 function count() {
     counter.innerText = parseInt(counter.innerText) + 1;
 };
@@ -17,6 +15,9 @@ function count() {
 function countUp() {
   interval = setInterval(count, 1000)
 }
+
+countUp() // Prime the count
+
 // As a user, I can manually increment and decrement the counter using the plus and minus buttons. CHECK
 minus.addEventListener("click", decrement);
 
