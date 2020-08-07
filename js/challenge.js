@@ -33,12 +33,12 @@ function increment(){
 }
 
 // As a user, I can 'like' an individual number of the counter. I should see count of the number of 'likes' associated with that number.
-document.getElementById("heart").addEventListener("click", like);
+heart.addEventListener("click", like);
 
 let tally = 0
 
 function like(){
-  let currentCount = parseInt(document.getElementById('counter').innerHTML)
+  let currentCount = parseInt(counter.innerHTML)
   let ul = document.getElementsByTagName('ul')[0]
   tally = tally + 1
   let element = document.createElement('li')
