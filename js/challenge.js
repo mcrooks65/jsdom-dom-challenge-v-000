@@ -5,7 +5,7 @@ let heart = document.getElementById("heart");
 let pause = document.getElementById("pause");
 let counter = document.getElementById("counter");
 let comments = document.getElementById("list");
-let submit = document.getElementById("submit");
+// let submit = document.getElementById("submit");
 let interval;
 
 function count() {
